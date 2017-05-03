@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {margin: 0;padding: 0;}/*去除默认样式，实战中不建议这么写*/
+    #container {  /*把盒布局变成弹性盒布局*/
+      display: -moz-box; /* 兼容Firefox */
+      display: -webkit-box; /* 兼容Chrome、Safari */
+    }
+    #left {
+      -moz-box-ordinal-group: 3; /*序号为3第三个显示 兼容Firefox*/
+      -webkit-box-ordinal-group: 3; /*序号为3第三个显示 兼容Chrome、Safari*/
+      width: 200px;/*左边div宽度固定*/
+      padding: 20px;
+      background-color: orange;
+    }
+    #center {
+      -moz-box-ordinal-group: 1; /*序号为1第一个显示 兼容Firefox*/
+      -webkit-box-ordinal-group: 1;/*序号为1第一个显示 兼容Chrome、Safari*/
+
+      -moz-box-flex: 1; /*中间div宽度自适应屏幕 兼容Firefox*/
+      -webkit-box-flex: 1;/*中间div宽度自适应屏幕 兼容Chrome、Safari*/
+
+      padding: 20px;
+      background-color: yellow;
+    }
+    #right {
+      -moz-box-ordinal-group: 2; /*序号为2第二个显示 兼容Firefox*/
+      -webkit-box-ordinal-group: 2; /*序号为2第二个显示 兼容Chrome、Safari*/
+
+      width: 200px; /*右边div宽度固定*/
+      padding: 20px;
+      background-color: limegreen;
+    }
+    #left,#center,#right {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="left">
+      <h2>左侧边栏</h2>
+      <ul>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+      </ul>
+    </div>
+    <div id="center">
+      <h2>内容</h2>
+      <p>我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容我是自适应内容</p>
+    </div>
+    <div id="right">
+      <h2>右侧边栏</h2>
+      <ul>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+        <li><a href="#">超链接</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
